@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body >
+
+	<button class="btn btn-danger" id="req" >Requests</button>
+<script>
+
+
+	 $( "#req" ).click(function() { 
+
+        e.preventDefault();
+
+        var tes="test";
+   	 jQuery.ajax({
+   	        type: "GET",
+   	        url: "http://localhost:8080//selcteventDetails/tomatoland",
+   	        data: { "id": "getStatus" }
+   	    }).done(function(msg) {
+   	    	showUsers(msg)
+   	    });
+   	  
+   	  
+   	});
+	 function showUsers(msg) {    	   
+			
+			var inputs = [];
+
+           
+                inputs.push(
+                    '<div class="form-group">' +
+                      '<label>' + value.ename + '</label>' +
+                      '<div class="col-sm-6">' +
+                        '<input type="text" name="' + value.name + '">' +
+                      '</div>' +
+                    '</div>'
+    }
+   
+
+
+</script>
+
+
+
+</body>
+</html>
